@@ -9,6 +9,7 @@ function setup() {
     flakes.push(flake);
   }
   fullscreen(true);
+  noCursor();
  }
 
 function draw() {
