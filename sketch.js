@@ -2,6 +2,7 @@ flakes = [];
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
+  noCursor();
   for (var i = 0; i < width / 4; i++) {
     // I can make the relative to the radius later
     // and I did it
@@ -9,7 +10,6 @@ function setup() {
     flakes.push(flake);
   }
   fullscreen(true);
-  noCursor();
  }
 
 function draw() {
