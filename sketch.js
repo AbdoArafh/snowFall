@@ -22,6 +22,10 @@ function draw() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 Flake = function(r, speed) {
   this.r = r;
   this.speed = speed;
