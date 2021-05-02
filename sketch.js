@@ -11,8 +11,6 @@ function setup() {
  }
 
 function draw() {
-  full();
-  // background('#222');
   background(0);
   for (var i = 0; i < flakes.length; i++) {
     flakes[i].update();
@@ -59,6 +57,6 @@ Flake = function(r) {
 
 }
 
-full = function() {
-  if (mouseIsPressed) fullscreen(!fullscreen())
+function mousePressed() {
+  fullscreen(!fullscreen())
 }
