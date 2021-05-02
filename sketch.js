@@ -4,9 +4,7 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   noCursor();
   for (var i = 0; i < width / 4; i++) {
-    // I can make the relative to the radius later
-    // and I did it
-    let flake = new Flake(random(5, 10), random(2, 4));
+    let flake = new Flake(random(5, 10));
     flakes.push(flake);
   }
   fullscreen(true);
@@ -26,9 +24,8 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-Flake = function(r, speed) {
+Flake = function(r) {
   this.r = r;
-  this.speed = speed;
   this.x = random(width);
   this.y = random(-height, 0);
 
@@ -42,7 +39,7 @@ Flake = function(r, speed) {
     } else {
       factor = 0;
     }
-    this.y += this.r; // this.speed;
+    this.y += this.r;
     this.x += this.r  * factor;
     if (this.y > height) {
       this.y = 0;
