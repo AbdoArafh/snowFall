@@ -13,7 +13,7 @@ function setup() {
  }
 
 function draw() {
-  // full();
+  full();
   // background('#222');
   background(0);
   for (var i = 0; i < flakes.length; i++) {
@@ -62,14 +62,6 @@ Flake = function(r, speed) {
 
 }
 
-/*
 full = function() {
-  if (mouseIsPressed) {
-    if (fullscreen()) {
-      fullscreen(false);
-    } else {
-      fullscreen(true);
-    }
-  }
+  if (mouseIsPressed) fullscreen(fullscreen())
 }
-*/
