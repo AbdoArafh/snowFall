@@ -60,5 +60,5 @@ Flake = function(r) {
 }
 
 full = function() {
-  if (mouseIsPressed) fullscreen(fullscreen())
+  if (mouseIsPressed) fullscreen(!fullscreen())
 }
